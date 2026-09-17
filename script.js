@@ -3,7 +3,7 @@ function grade(){
     let displayArea = document.getElementById('see');
     if (userScore == '') {
       displayArea.innerHTML = `<h2>Please enter a valid score between 1 and 100</h2>`
-    }else if (userScore <= 40) {
+    }else if (userScore <= 39) {
        displayArea.innerHTML = `<h2>F9-fail</h2>` 
     }else if (userScore <= 44) {
        displayArea.innerHTML = `<h2>E8-pass</h2>` 
@@ -19,5 +19,7 @@ function grade(){
         displayArea.innerHTML = `<h2>B2-Good</h2>`
     }else if (userScore <= 100) {
         displayArea.innerHTML = `<h2>A1-EXcellent</h2>`
+    }else if (userScore > 100) {
+        displayArea.innerHTML = `<h2>INVALID!</h2>`
     }
 }
